@@ -40,7 +40,7 @@ if(isset($_POST["submit"])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/login1.css">
+    <link rel="stylesheet" href="../styles/login.css">
     <link rel="stylesheet" href="../styles/style1.css">
     <title>Document</title>
 </head>
@@ -65,8 +65,8 @@ if(isset($_POST["submit"])){
     </header>
     <div class="body">
   <fieldset>
+    <legend>Registratie</legend>
     <form class="" action="" method="post" autocomplete="off">
-        <h2>registration</h2>
         <label for="name">Name :</label>
         <input type="text" name="name" id="name" required value=""><br>
         <label for="username">Username :</label>

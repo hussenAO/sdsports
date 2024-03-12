@@ -28,8 +28,20 @@ h2 {
 }
 
 fieldset {
+    position: relative;
     border-color: yellow;
     border-radius: 5px;
+    padding-top: 30px; /* Voeg padding toe aan de bovenkant van het fieldset */
+}
+
+legend {
+    position: absolute;
+    top: -30px; /* Verplaats de legend een beetje naar boven */
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
 }
 
 button {

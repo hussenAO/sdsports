@@ -27,7 +27,7 @@ if(isset($_POST["submit"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     
-    <link rel="stylesheet" href="../styles/login1.css">
+    <link rel="stylesheet" href="../styles/login.css">
     <link rel="stylesheet" href="../styles/style1.css">
     <title>Document</title>
 </head>
@@ -52,8 +52,8 @@ if(isset($_POST["submit"])){
     </header>
     <div class="body">
   <fieldset>
+    <legend>Log-In</legend>
     <form class="" action="" method="post" autocomplete="off">
-        <h2>login</h2>
         <i class="fas fa-sign-in-alt"></i><br>
         <label for="usernameemail">username :</label>
         <input type="text" name="usernameemail" id="usernameemail" required value=""><br>
