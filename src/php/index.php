@@ -16,6 +16,7 @@ if(!empty($_SESSION["id"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icon" href="../assets/favicon.png" type="image/x-icon">
 </head>
 <body>
     <h1>welcome <?php echo  $row["name"];?> </h1>

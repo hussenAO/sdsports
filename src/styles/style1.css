@@ -1,4 +1,6 @@
-* {
+*,
+*:before,
+*:after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,6 +10,50 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #282828;
+}
+
+.container{
+    height: 11px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+#toggle{
+    -webkit-appearance: none;
+    appearance: none;
+    height: 40px;
+    width: 75px;
+    background-color: #282828;
+    position: absolute;
+    right: 0;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+#toggle:after{
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: #ffffff;
+    top: 5px;
+    left: 5px;
+    border-radius: 50%;
+}
+
+.light-theme{
+    background-color: #fff;
+    color: black;
+}
+.light-theme #toggle{
+    background-color: #282828
+}
+.light-theme #toggle:after{
+    background-color: transparent;
+    box-shadow: 10px 10px black;
+    top: -4px;
+    left: 30px;
 }
 
 nav {
@@ -24,7 +70,7 @@ nav ul {
 }
 
 nav ul li img {
-    height: 36px;
+    height: 40px;
     margin: 16px 0px;
 }
 
@@ -197,7 +243,7 @@ main .card{
     flex: 1 1 210px;
     text-align: center;
     height: 420px;
-    border: 1px solid lightgray;
+    border: 1px solid rgb(150, 150, 150);
     margin: 20px;
     background-color: lightgray;
 }
@@ -428,4 +474,3 @@ p4 {
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  
