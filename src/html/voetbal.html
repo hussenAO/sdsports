@@ -7,6 +7,7 @@
     <title>SDsports</title>
     <link rel="stylesheet" href="../styles/style1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="../assets/favicon.png" type="image/x-icon">
 </head>
 
@@ -24,84 +25,84 @@
                         <a href="running.html">Ren schoenen</a>
                     </div>
                 </li>
-                <li><a href="winkelwagen.html">Mijn winkelmand</a></li>
+                <p id="cart-icon">winkelwagen</p>
+
                 <li><a href="../php/index.php">Inloggen</a></li>
                 <div class="container">
                     <input type="checkbox" id="toggle">
                 </div>
             </ul>
         </nav>
+                   <!-- CART  -->
+                   <div class="cart">
+                       <h2 class="cart-title">Your Cart</h2>
+       
+                       <!-- CONTENT  -->
+                       <div class="cart-content">
+       
+       
+                       </div>
+       
+                       <!-- TOTAL   -->
+                       <div class="total">
+                           <div class="total-title">Total</div>
+                           <div class="total-price">$0</div>
+                       </div>
+                       <!-- BUY BUTTON  -->
+                       <button type="button" class="btn-buy">Buy Now</button>
+                       <!-- CART CLOSE  -->
+                       <i class='bx bx-x' id="cart-close"></i>
+                   </div>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <div class="card">
-            <div class="image">
-                <img src="../assets/voetbal1.jpg">
-            </div>
-            <div class="caption">
-                <p class="rate">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </p>
-                <p class="product_name">Nike Mercurial Vapor</p>
-                <p class="price"><b>$150</b></p>
-                <p class="discount"><b><del>$249</del></b></p>
-            </div>
-            <button class="add">Add to cart</button>
+              
+<div class="card">
+    <div class="shop-content">
+    
+        <div class="product-box">
+            <img src="../assets/voetbal1.jpg"alt="" class="product-img">
+            <h2 class="product-title">Nike Mercurial Vapor </h2>
+            <span class="product-price">$150,00</span> 
+            <p class="discount"><b><del>$249</del></b></p>   
         </div>
-        <div class="card">
-            <div class="image">
-                <img src="../assets/voetbal4.jpg">
-            </div>
-            <div class="caption">
-                <p class="rate">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </p>
-                <p class="product_name">Nike Mercurial Superfly</p>
-                <p class="price"><b>$190</b></p>
-            </div>
-            <button class="add">Add to cart</button>
+</div> <br> <button class="add-cart">Add to cart</button>
+
+</div>
+<div class="card">
+    <div class="shop-content">
+    
+        <div class="product-box">
+            <img src="../assets/voetbal4.jpg"alt="" class="product-img">
+            <h2 class="product-title">Nike Mercurial Superfly</h2>
+            <span class="product-price">$190,00</span> 
         </div>
-        <div class="card">
-            <div class="image">
-                <img src="../assets/voetbalironman.jpg">
-            </div>
-            <div class="caption">
-                <p class="rate">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </p>
-                <p class="product_name">Nike X Marvel Ironman</p>
-                <p class="price"><b>$299</b></p>
-            </div>
-            <button class="add">Add to cart</button>
+</div> <br> <button class="add-cart">Add to cart</button>
+
+</div>
+<div class="card">
+    <div class="shop-content">
+    
+        <div class="product-box">
+            <img src="../assets/voetbalironman.jpg"alt="" class="product-img">
+            <h2 class="product-title">Nike X Marvel Ironman</h2>
+            <span class="product-price">$299,00</span> 
         </div>
-        <div class="card">
-            <div class="image">
-                <img src="../assets/voetbal7-PhotoRoom.png-PhotoRoom.png">
-            </div>
-            <div class="caption">
-                <p class="rate">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </p>
-                <p class="product_name">Nike Mercurial White Purple</p>
-                <p class="price"><b>$350</b></p>
-            </div>
-            <button class="add">Add to cart</button>
+</div> <br> <button class="add-cart">Add to cart</button>
+
+</div>
+<div class="card">
+    <div class="shop-content">
+    
+        <div class="product-box">
+            <img src="../assets/voetbal7-PhotoRoom.png-PhotoRoom.png"alt="" class="product-img">
+            <h2 class="product-title">Nike Mercurial White Purple</h2>
+            <span class="product-price">$350,00</span> 
         </div>
+</div> <br> <button class="add-cart">Add to cart</button>
+
     </main>
     <footer>
         <div class="footer-container">
@@ -133,6 +134,7 @@
         </div>
     </footer>
     <script src="../JS/script.js"></script>
+    <script src="../JS/cart.js"></script>
 </body>
 
 </html>

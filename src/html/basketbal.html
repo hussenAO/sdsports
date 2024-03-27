@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SDsports</title>
     <link rel="stylesheet" href="../styles/style1.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" href="../assets/favicon.png" type="image/x-icon">
 </head>
@@ -24,83 +25,84 @@
                         <a href="running.html">Ren schoenen</a>
                     </div>
                 </li>
-                <li><a href="winkelwagen.html">Mijn winkelmand</a></li>
+                <p id="cart-icon">winkelwagen</p>
+
                 <li><a href="../php/index.php">Inloggen</a></li>
                 <div class="container">
                     <input type="checkbox" id="toggle">
                 </div>
             </ul>
         </nav>
+                   <!-- CART  -->
+                   <div class="cart">
+                       <h2 class="cart-title">Your Cart</h2>
+       
+                       <!-- CONTENT  -->
+                       <div class="cart-content">
+       
+       
+                       </div>
+       
+                       <!-- TOTAL   -->
+                       <div class="total">
+                           <div class="total-title">Total</div>
+                           <div class="total-price">$0</div>
+                       </div>
+                       <!-- BUY BUTTON  -->
+                       <button type="button" class="btn-buy">Buy Now</button>
+                       <!-- CART CLOSE  -->
+                       <i class='bx bx-x' id="cart-close"></i>
+                   </div>
+            </ul>
+        </nav>
     </header>
     <main>
         <div class="card">
-            <div class="image">
-                <img src="../assets/Basketbal1.jpg">
-            </div>
-            <div class="caption">
-                <p class="rate">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </p>
-                <p class="product_name">Air Jordan XX9</p>
-                <p class="price"><b>$225,00</b></p>
-                <p class="discount"><b><del>$250</del></b></p>
-            </div>
-            <button class="add">Add to cart</button>
+            <div class="shop-content">
+            
+                <div class="product-box">
+                    <img src="../assets/Basketbal1.jpg"alt="" class="product-img">
+                    <h2 class="product-title">Air Jordan XX9</h2>
+                    <span class="product-price">$225,00</span> 
+                    <p class="discount"><b><del>$249</del></b></p> 
+                </div>
+        </div> <br> <button class="add-cart">Add to cart</button>
+        
+        </div>    
+        
+        <div class="card">
+            <div class="shop-content">
+            
+                <div class="product-box">
+                    <img src="../assets/Basketbal2.jpg"alt="" class="product-img">
+                    <h2 class="product-title">Air Jordan retro 7</h2>
+                    <span class="product-price">$145,00</span> 
+                </div>
+        </div> <br> <button class="add-cart">Add to cart</button>
+        
         </div>
         <div class="card">
-            <div class="image">
-                <img src="../assets/Basketbal2.jpg">
-            </div>
-            <div class="caption">
-                <p class="rate">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </p>
-                <p class="product_name">Air Jordan retro 7</p>
-                <p class="price"><b>$145,99</b></p>
-            </div>
-            <button class="add">Add to cart</button>
+            <div class="shop-content">
+            
+                <div class="product-box">
+                    <img src="../assets/Basketbal3.jpg"alt="" class="product-img">
+                    <h2 class="product-title">Air Jordan XX3</h2>
+                    <span class="product-price">$189,99</span> 
+                </div>
+        </div> <br> <button class="add-cart">Add to cart</button>
+        
         </div>
         <div class="card">
-            <div class="image">
-                <img src="../assets/Basketbal3.jpg">
-            </div>
-            <div class="caption">
-                <p class="rate">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </p>
-                <p class="product_name">Air Jordan XX3</p>
-                <p class="price"><b>$189,99</b></p>
-            </div>
-            <button class="add">Add to cart</button>
-        </div>
-        <div class="card">
-            <div class="image">
-                <img src="../assets/basketbal4.jpg">
-            </div>
-            <div class="caption">
-                <p class="rate">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </p>
-                <p class="product_name">Nike Kyrie 4 Triple Black</p>
-                <p class="price"><b>$123,00</b></p>
-            </div>
-            <button class="add">Add to cart</button>
-        </div>
+            <div class="shop-content">
+            
+                <div class="product-box">
+                    <img src="../assets/basketbal4.jpg"alt="" class="product-img">
+                    <h2 class="product-title">Nike Kyrie 4 Triple Black</h2>
+                    <span class="product-price">$123,00</span> 
+                </div>
+        </div> <br> <button class="add-cart">Add to cart</button>
+        
+        </div>   
     </main>
     <footer>
         <div class="footer-container">
@@ -132,6 +134,7 @@
         </div>
     </footer>
     <script src="../JS/script.js"></script>
+    <script src="../JS/cart.js"></script>
 </body>
 
 </html>

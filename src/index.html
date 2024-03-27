@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SD Sports</title>
     <link rel="stylesheet" href="styles/style1.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="assets/favicon.png" type="image/x-icon">
 </head>
 <body>
@@ -21,10 +22,31 @@
                         <a href="html/running.html">Ren schoenen</a>
                     </div>
                  </li>
-                <li><a href="html/winkelwagen.html">Mijn winkelmand</a></li>
+                <p id="cart-icon"> mijn winkelwagen</p>
+
                 <li><a href="php\index.php">Inloggen</a></li>
             </ul>
         </nav>
+                   <!-- CART  -->
+                   <div class="cart">
+                       <h2 class="cart-title">Your Cart</h2>
+       
+                       <!-- CONTENT  -->
+                       <div class="cart-content">
+       
+       
+                       </div>
+       
+                       <!-- TOTAL   -->
+                       <div class="total">
+                           <div class="total-title">Total</div>
+                           <div class="total-price">$0</div>
+                       </div>
+                       <!-- BUY BUTTON  -->
+                       <button type="button" class="btn-buy">Buy Now</button>
+                       <!-- CART CLOSE  -->
+                       <i class='bx bx-x' id="cart-close"></i>
+                   </div>
         <section id="ads">
             <div class="ad" id="ad1">
                 <div class="ad-content">
@@ -70,5 +92,6 @@
             <p>&copy; 2023 SD Sports. All rights reserved.</p>
         </div>
     </footer>
+    <script src="JS/cart.js"></script>
 </body>
 </html>

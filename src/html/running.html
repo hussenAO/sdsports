@@ -7,6 +7,7 @@
     <title>SD Sports</title>
     <link rel="stylesheet" href="../styles/style1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="../assets/favicon.png" type="image/x-icon">
 </head>
 
@@ -24,79 +25,83 @@
                         <a href="running.html">Ren schoenen</a>
                     </div>
                 </li>
-                <li><a href="winkelwagen.html">Mijn winkelmand</a></li>
+                <p id="cart-icon">winkelwagen</p>
+
                 <li><a href="../php/index.php">Inloggen</a></li>
                 <div class="container">
                     <input type="checkbox" id="toggle">
                 </div>
             </ul>
         </nav>
+                   <!-- CART  -->
+                   <div class="cart">
+                       <h2 class="cart-title">Your Cart</h2>
+       
+                       <!-- CONTENT  -->
+                       <div class="cart-content">
+       
+       
+                       </div>
+       
+                       <!-- TOTAL   -->
+                       <div class="total">
+                           <div class="total-title">Total</div>
+                           <div class="total-price">$0</div>
+                       </div>
+                       <!-- BUY BUTTON  -->
+                       <button type="button" class="btn-buy">Buy Now</button>
+                       <!-- CART CLOSE  -->
+                       <i class='bx bx-x' id="cart-close"></i>
+                   </div>
+            </ul>
+        </nav>
     </header>
     <main>
         <div class="card">
-            <div class="image">
-                <img src="../assets/running1.jpg">
+            <div class="shop-content">
+    
+                <div class="product-box">
+                    <img src="../assets/running1.jpg" alt="" class="product-img">
+                    <h2 class="product-title">Nike Running 3D</h2>
+                    <span class="product-price">$79.50</span> 
+                </div>
+        </div> <br> <button class="add-cart">Add to cart</button>
+  
+    </div>
+    <div class="card">
+        <div class="shop-content">
+                <div class="product-box">
+                <img src=" ../assets/running2.jpg"alt="" class="product-img">
+                <h2 class="product-title"> Asics Runner 1</h2>
+                <span class="product-price">$59.50</span> 
             </div>
-            <div class="caption">
-                <p class="rate">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </p>
-                <p class="product_name">Nike running 3D</p>
-                <p class="price"><b>$56,25</b></p>
-            </div>
-            <button class="add">Add to cart</button>
+    </div> <br> <button class="add-cart">Add to cart</button>
+
+</div>
+<div class="card">
+    <div class="shop-content">
+
+        <div class="product-box">
+            <img src="../assets/running3.jpg"alt="" class="product-img">
+            <h2 class="product-title"> naKed slip on runner</h2>
+            <span class="product-price">$120,99</span> 
         </div>
-        <div class="card">
-            <div class="image">
-                <img src="../assets/running2.jpg">
-            </div>
-            <div class="caption">
-                <p class="rate">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </p>
-                <p class="product_name">Asics runner one</p>
-                <p class="price"><b>$36,00</b></p>
-            </div>
-            <button class="add">Add to cart</button>
+</div> <br> <button class="add-cart">Add to cart</button>
+
+</div>
+<div class="card">
+    <div class="shop-content">
+    
+        <div class="product-box">
+            <img src="../assets/Running1.jpeg"alt="" class="product-img">
+            <h2 class="product-title">Nike Runner Neo </h2>
+            <span class="product-price">$123,00</span> 
         </div>
-        <div class="card">
-            <div class="image">
-                <img src="../assets/running3.jpg">
-            </div>
-            <div class="caption">
-                <p class="rate">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </p>
-                <p class="product_name">naKed slip on runner</p>
-                <p class="price"><b>$120,99</b></p>
-            </div>
-            <button class="add">Add to cart</button>
-        </div>
-        <div class="card">
-            <div class="image">
-                <img src="../assets/Running1.jpeg">
-            </div>
-            <div class="caption">
-                <p class="rate">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </p>
-                <p class="product_name">Nike Runner Neo</p>
-                <p class="price"><b>$123,00</b></p>
-            </div>
-            <button class="add">Add to cart</button>
-        </div>
+</div> <br> <button class="add-cart">Add to cart</button>
+
+</div>
+</div>
+       
     </main>
     <footer>
         <div class="footer-container">
@@ -128,6 +133,7 @@
         </div>
     </footer>
     <script src="../JS/script.js"></script>
+    <script src="../JS/cart.js"></script>
 </body>
 
 </html>

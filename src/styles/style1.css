@@ -5,7 +5,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+:root{
+    --main-color: #fd4646;
+    --sec-color: #4946fd;
+    --text-color: #171427;
+    --bg-color: #fff;
+}
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -14,7 +19,7 @@ body {
 
 .container{
     height: 11px;
-    position: relative;
+    position:relative;
     margin-bottom: 30px;
 }
 
@@ -327,109 +332,111 @@ main .card button:hover::before{
 main .card button:hover::after{
     width: 30%;
 }
+#cart-icon{
 
-.winkelwagen{
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    top: 28px;
-    margin-left: 10px;
-}
-
-.bedrag{
-    margin: 0;
-    position: fixed;
-    background-color: white;
-    color: black;
-    margin-left: 1000px;
-    margin-top: 135px;
-    height: 475px;
-    width: 430px;
-
-}
-
-p1 {
-    position: fixed;
-    font-size: 22px;
-    text-decoration: none;
-    margin-left: 10px;
-    margin-top: 10px;
-}
-
-p2 {
-    position: fixed;
-    font-size: 16px;
-    text-decoration: none;
-    margin-left: 30px;
-    margin-top: 90px;
-}
-
-p3 {
-    position: fixed;
-    font-size: 13px;
-    text-decoration: none;
-    margin-left: 30px;
-    margin-top: 217px;
-    color: #8b8b8b;
-}
-
-p4 {
-    position: fixed;
-    font-size: 16px;
-    text-decoration: none;
-    margin-left: 30px;
-    margin-top: 265px;
-}
-
-.verplicht {
-    color: black;
-    position: fixed;
-    font-size: 13px;
-    text-decoration: none;
-    margin-top: 375px;
-    margin-left: 120px;
-}
-
-.lijn1 {
-    position: fixed;
-    border: 1px solid rgb(0, 0, 0);
-    width: 430px;
-    margin-left: 0px;
-    margin-top: 45px;
- }
- .lijn2 {
-    position: fixed;
-    border: 1px solid rgb(0, 0, 0);
-    width: 330px;
-    margin-left: 50px;
-    margin-top: 200px;
- }
- .lijn3 {
-    position: fixed;
-    border: 1px solid rgb(0, 0, 0);
-    width: 330px;
-    margin-left: 50px;
-    margin-top: 250px;
- }
-
- .kopen {
-    position: fixed;
-    background-color: #2e2e2e;
+    cursor: pointer;
     color: white;
-    margin-left: 50px;
-    margin-top: 325px;
-    width: 330px;
-    height: 40px;
-    border-radius: 10px;
- }
+}
 
- .kopen:hover {
-    background-color: #8b8b8b;
- }
+/* CART  */
+.cart{
+    position: fixed;
+    top: 0;
+    right: 0;
+    right: -100%; 
+    width: 360px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+    background-color: var(--bg-color);
+    box-shadow: -2px solid 4px hsl(0 4% 15% / 10%);
+    border: 1px solid var(--main-color);
+    transition: 1.5s;
+}
+.cart.active{
+    right: 0;
+    transition: .5s;
+    z-index: 1000;
+}
+.cart-title{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+.cart-box{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.cart-img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+}
+.detail-box{
+    display: grid;
+    row-gap: .5rem;
+}
+.cart-product-title{
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.cart-price{
+    font-weight: 500;
+}
+.cart-quantity{
+    border: 1px solid var(--text-color);
+    outline-color: var(--main-color);
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem;
+}
+.cart-remove{
+    font-size: 24px;
+    color: var(--main-color);
+    cursor: pointer;
+}
+.total{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--text-color);
+}
+.total-title{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.total-price{
+    margin-left: .5rem;
+}
+.btn-buy{
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background-color: var(--sec-color);
+    color: var(--bg-color);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.btn-buy:hover{
+    background-color: var(--text-color);
+}
+#cart-close{
+    position: absolute;
+    top: 1rem;
+    right: .8rem;
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
 
- .verplicht:hover {
-    color: #689aff;
- }
 
  /* Dropdown Button */
 .dropbtn {
@@ -474,3 +481,49 @@ p4 {
   .dropdown:hover .dropdown-content {
     display: block;
   }
+  .section-title{
+    font-style: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.shop-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 1.5rem;
+}
+  .product-box{
+    position: relative;
+}
+.product-box:hover{
+    padding: 10px;
+    border: 1px solid var(--text-color);
+    transition: .4s;
+}
+.product-img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: .5rem;
+}
+.product-title{
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+}
+.product-price{
+    font-weight: 500;
+}
+.add-cart{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    padding: 10px;
+    cursor: pointer;
+}
+.add-cart:hover{
+    background-color: hsl(249, 32%, 17%);
+}
