@@ -28,6 +28,7 @@
                 <p id="cart-icon">winkelwagen</p>
 
                 <li><a href="../php/index.php">Inloggen</a></li>
+                <div id="search-icon"><i class="fas fa-search"></i></div>
                 <div class="container">
                     <input type="checkbox" id="toggle">
                 </div>
@@ -55,6 +56,54 @@
                    </div>
             </ul>
         </nav>
+        <input type="text" id="searchBar" onkeyup="searchFunction()" placeholder="Search">
+
+                    <ul id="myList">
+                    <li><a href="producten.html">Producten</a></li>
+                    <li><a href="basketbal.html">Basketbal</a></li>
+                    <li><a href="running.html">Running</a></li>
+                    <li><a href="voetbal.html">Voetbal</a></li>
+                    <!-- Add more list items as needed -->
+                    </ul>
+                    <style>
+                        #myList li {
+                          display: none;
+                        }
+                      </style>
+                      <script>
+                        function showListItem(event) {
+                          event.target.style.display = 'block';
+                        }
+                      </script>
+                      <script>
+                        function searchFunction() {
+                          var input, filter, ul, li, a, i, txtValue;
+                          input = document.getElementById('searchBar');
+                          filter = input.value.toUpperCase();
+                          ul = document.getElementById("myList");
+                          li = ul.getElementsByTagName('li');
+                        
+                          for (i = 0; i < li.length; i++) {
+                            a = li[i].getElementsByTagName("a")[0];
+                            txtValue = a.textContent || a.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                              li[i].style.display = "list-item"; // Show the list item if it matches
+                            } else {
+                              li[i].style.display = "none"; // Hide the list item if it doesn't match
+                            }
+                          }
+                        }
+                        </script>
+                        <script>
+                            document.getElementById('search-icon').addEventListener('click', function() {
+                              var searchBar = document.getElementById('searchBar');
+                              if (searchBar.style.display === 'none') {
+                                searchBar.style.display = 'block';
+                              } else {
+                                searchBar.style.display = 'none';
+                              }
+                            });
+                            </script>
     </header>
 
     <main>
