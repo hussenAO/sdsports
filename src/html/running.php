@@ -1,14 +1,19 @@
+<?php
+// Start de sessie
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SDsports</title>
+    <title>SD Sports</title>
     <link rel="stylesheet" href="../styles/style.css">
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="../assets/favicon.png" type="image/x-icon">
+    
 </head>
 
 <body>
@@ -18,16 +23,25 @@
                 <li><a href="../index.php"><img src="../assets/SDLOGO.png" alt="SD Logo"></a></li>
                 <li><a href="../index.php">Home</a></li>
                 <li class="dropdown">
-                    <a href="producten.html" class="dropbtn">Alle Producten</a>
+                    <a href="producten.php" class="dropbtn">Alle Producten</a>
                     <div class="dropdown-content">
-                        <a href="basketbal.html">Basketbal schoenen</a>
-                        <a href="voetbal.html">Voetbal schoenen</a>
-                        <a href="running.html">Ren schoenen</a>
+                        <a href="basketbal.php">Basketbal schoenen</a>
+                        <a href="voetbal.php">Voetbal schoenen</a>
+                        <a href="running.php">Ren schoenen</a>
                     </div>
                 </li>
                 <p id="cart-icon">Winkelwagen</p>
 
-                <li><a href="../php/index.php">Inloggen</a></li>
+                <?php
+// Controleer of de gebruiker is ingelogd
+if (isset($_SESSION['login'])) {
+    // Gebruiker is ingelogd, toon de uitlogknop
+    echo '<li><a href="php/logout.php">Uitloggen</a></li>';
+} else {
+    // Gebruiker is niet ingelogd, toon de inlogknop
+    echo '<li><a href="php/login.php">Inloggen</a></li>';
+}
+?>
                 <div id="search-icon"><i class="fas fa-search"></i></div>
                 <div class="container">
                     <input type="checkbox" id="toggle">
@@ -106,57 +120,56 @@
                             </script>
     </header>
     <video autoplay muted loop width="100%">
-        <source src="../assets/commercial4.mp4">
+        <source src="../assets/commercial5.mp4">
      </video>
      <hr>
      <hr>
     <main>
         <div class="card">
             <div class="shop-content">
-            
+    
                 <div class="product-box">
-                    <img src="../assets/Basketbal1.jpg"alt="" class="product-img">
-                    <h2 class="product-title">Air Jordan XX9</h2>
-                    <span class="product-price">$225,00</span> 
-                    <p class="discount"><b><del>$249</del></b></p> 
+                    <img src="../assets/running1.jpg" alt="" class="product-img">
+                    <h2 class="product-title">Nike Running 3D</h2>
+                    <span class="product-price">$79.50</span> 
                 </div>
         </div> <br> <button class="add-cart">Add to cart</button>
-        
-        </div>    
-        
-        <div class="card">
-            <div class="shop-content">
-            
+  
+    </div>
+    <div class="card">
+        <div class="shop-content">
                 <div class="product-box">
-                    <img src="../assets/Basketbal2.jpg"alt="" class="product-img">
-                    <h2 class="product-title">Air Jordan retro 7</h2>
-                    <span class="product-price">$145,00</span> 
-                </div>
-        </div> <br> <button class="add-cart">Add to cart</button>
-        
+                <img src=" ../assets/running2.jpg"alt="" class="product-img">
+                <h2 class="product-title"> Asics Runner 1</h2>
+                <span class="product-price">$59.50</span> 
+            </div>
+    </div> <br> <button class="add-cart">Add to cart</button>
+
+</div>
+<div class="card">
+    <div class="shop-content">
+
+        <div class="product-box">
+            <img src="../assets/running3.jpg"alt="" class="product-img">
+            <h2 class="product-title"> naKed slip on runner</h2>
+            <span class="product-price">$120,99</span> 
         </div>
-        <div class="card">
-            <div class="shop-content">
-            
-                <div class="product-box">
-                    <img src="../assets/Basketbal3.jpg"alt="" class="product-img">
-                    <h2 class="product-title">Air Jordan XX3</h2>
-                    <span class="product-price">$189,99</span> 
-                </div>
-        </div> <br> <button class="add-cart">Add to cart</button>
-        
+</div> <br> <button class="add-cart">Add to cart</button>
+
+</div>
+<div class="card">
+    <div class="shop-content">
+    
+        <div class="product-box">
+            <img src="../assets/Running1.jpeg"alt="" class="product-img">
+            <h2 class="product-title">Nike Runner Neo </h2>
+            <span class="product-price">$123,00</span> 
         </div>
-        <div class="card">
-            <div class="shop-content">
-            
-                <div class="product-box">
-                    <img src="../assets/basketbal4.jpg"alt="" class="product-img">
-                    <h2 class="product-title">Nike Kyrie 4 Triple Black</h2>
-                    <span class="product-price">$123,00</span> 
-                </div>
-        </div> <br> <button class="add-cart">Add to cart</button>
-        
-        </div>   
+</div> <br> <button class="add-cart">Add to cart</button>
+
+</div>
+</div>
+       
     </main>
     <footer>
         <div class="footer-container">
@@ -177,9 +190,9 @@
 
             <div class="footer-section">
                 <h4>Alle producten</h4>
-                <a href="basketbal.html">Basketbal schoenen</a>
-                <a href="voetbal.html">Voetbal schoenen</a>
-                <a href="running.html">Ren schoenen</a>
+                <a href="producten.html">Basketbal schoenen</a>
+                <a href="producten.html">Voetbal schoenen</a>
+                <a href="producten.html">Ren schoenen</a>
             </div>
         </div>
 

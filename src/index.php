@@ -1,3 +1,7 @@
+<?php
+// Start de sessie
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,19 +20,16 @@
                 <li><a href="index.php"><img src="assets/SDLOGO.png" alt="SD Logo"></a></li>
                 <li><a href="index.php">Home</a></li>
                 <li class="dropdown">
-                    <a href="html/producten.html" class="dropbtn">Alle Producten</a>
+                    <a href="html/producten.php" class="dropbtn">Alle Producten</a>
                     <div class="dropdown-content">
-                        <a href="html/basketbal.html">Basketbal schoenen</a>
-                        <a href="html/voetbal.html">Voetbal schoenen</a>
-                        <a href="html/running.html">Ren schoenen</a>
+                        <a href="html/basketbal.php">Basketbal schoenen</a>
+                        <a href="html/voetbal.php">Voetbal schoenen</a>
+                        <a href="html/running.php">Ren schoenen</a>
                     </div>
                  </li>
                  <p id="cart-icon">Winkelwagen</p>
 
                 <?php
-// Start de sessie
-session_start();
-
 // Controleer of de gebruiker is ingelogd
 if (isset($_SESSION['login'])) {
     // Gebruiker is ingelogd, toon de uitlogknop

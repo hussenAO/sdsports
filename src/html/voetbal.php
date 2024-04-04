@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,16 +21,25 @@
                 <li><a href="../index.php"><img src="../assets/SDLOGO.png" alt="SD Logo"></a></li>
                 <li><a href="../index.php">Home</a></li>
                 <li class="dropdown">
-                    <a href="producten.html" class="dropbtn">Alle Producten</a>
+                    <a href="producten.php" class="dropbtn">Alle Producten</a>
                     <div class="dropdown-content">
-                        <a href="basketbal.html">Basketbal schoenen</a>
-                        <a href="voetbal.html">Voetbal schoenen</a>
-                        <a href="running.html">Ren schoenen</a>
+                        <a href="basketbal.php">Basketbal schoenen</a>
+                        <a href="voetbal.php">Voetbal schoenen</a>
+                        <a href="running.php">Ren schoenen</a>
                     </div>
                 </li>
                 <p id="cart-icon">Winkelwagen</p>
 
-                <li><a href="../php/index.php">Inloggen</a></li>
+                <?php
+// Controleer of de gebruiker is ingelogd
+if (isset($_SESSION['login'])) {
+    // Gebruiker is ingelogd, toon de uitlogknop
+    echo '<li><a href="../php/logout.php">Uitloggen</a></li>';
+} else {
+    // Gebruiker is niet ingelogd, toon de inlogknop
+    echo '<li><a href="../php/login.php">Inloggen</a></li>';
+}
+?>
                 <div id="search-icon"><i class="fas fa-search"></i></div>
                 <div class="container">
                     <input type="checkbox" id="toggle">
