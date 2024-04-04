@@ -9,7 +9,7 @@ if(isset($_POST["submit"])){
         if($password == $row["password"]){
             $_SESSION["login"] = true;
             $_SESSION["id"] = $row["id"];
-            echo "<script> alert('login successful'); window.location.href='../index.html'; </script>";
+            echo "<script> alert('login successful'); window.location.href='../index.php'; </script>";
             exit; // Make sure to exit after redirection
         } else {
             echo "<script> alert('Password incorrect'); </script>";
@@ -35,8 +35,8 @@ if(isset($_POST["submit"])){
     <header>
         <nav>
             <ul>
-                <li><a href="../index.html"><img src="../assets/SDLOGO.png" alt="SD Logo"></a></li>
-                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.php"><img src="../assets/SDLOGO.png" alt="SD Logo"></a></li>
+                <li><a href="../index.php">Home</a></li>
                 <li class="dropdown">
                 <a href="../html/producten.html" class="dropbtn">Alle Producten</a>
                 <div class="dropdown-content">
@@ -46,7 +46,7 @@ if(isset($_POST["submit"])){
                 </div>
              </li>
     
-                <li><a href="index.php">Inloggen</a></li>
+            
             </ul>
         </nav>
     </header>

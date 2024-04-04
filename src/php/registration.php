@@ -48,8 +48,8 @@ if(isset($_POST["submit"])){
 <header>
         <nav>
             <ul>
-                <li><a href="../index.html"><img src="../assets/SDLOGO.png" alt="SD Logo"></a></li>
-                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.php"><img src="../assets/SDLOGO.png" alt="SD Logo"></a></li>
+                <li><a href="../index.php">Home</a></li>
                 <li class="dropdown">
                 <a href="../html/producten.html" class="dropbtn">Alle Producten</a>
                 <div class="dropdown-content">
@@ -58,8 +58,7 @@ if(isset($_POST["submit"])){
                     <a href="../html/running.html">Ren schoenen</a>
                 </div>
              </li>
-          
-                <li><a href="index.php">Inloggen</a></li>
+            
             </ul>
         </nav>
     </header>

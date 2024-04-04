@@ -13,8 +13,8 @@
     <header>
         <nav>
             <ul>
-                <li><a href="index.html"><img src="assets/SDLOGO.png" alt="SD Logo"></a></li>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.php"><img src="assets/SDLOGO.png" alt="SD Logo"></a></li>
+                <li><a href="index.php">Home</a></li>
                 <li class="dropdown">
                     <a href="html/producten.html" class="dropbtn">Alle Producten</a>
                     <div class="dropdown-content">
@@ -23,10 +23,26 @@
                         <a href="html/running.html">Ren schoenen</a>
                     </div>
                  </li>
-                <p id="cart-icon"> mijn winkelwagen</p>
-                <li><a href="php\index.php">Inloggen</a></li>
-                
+                 <p id="cart-icon">Winkelwagen</p>
+
+                <?php
+// Start de sessie
+session_start();
+
+// Controleer of de gebruiker is ingelogd
+if (isset($_SESSION['login'])) {
+    // Gebruiker is ingelogd, toon de uitlogknop
+    echo '<li><a href="php/logout.php">Uitloggen</a></li>';
+} else {
+    // Gebruiker is niet ingelogd, toon de inlogknop
+    echo '<li><a href="php/login.php">Inloggen</a></li>';
+}
+?>
                 <div id="search-icon"><i class="fas fa-search"></i></div>
+
+
+    
+                
             </ul>
         </nav>
                    <!-- CART  -->
