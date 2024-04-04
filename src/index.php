@@ -12,6 +12,7 @@ session_start();
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="assets/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
@@ -144,9 +145,9 @@ if (isset($_SESSION['login'])) {
 
             <div class="footer-section">
                 <h4>Volg ons op</h4>
-                <h5>Facebook<h5>
-                <h5>Twitter<h5>
-                <h5>Instagram<h5>
+                <a href="https://facebook.com" class="fa fa-facebook"> Facebook</a>
+                <a href="https://twitter.com" class="fa fa-twitter"> Twitter</a>
+                <a href="https://www.instagram.com" class="fa fa-instagram"> Instagram</a>
             </div>
             
             <div class="footer-section">
