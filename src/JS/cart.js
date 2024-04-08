@@ -1,17 +1,27 @@
+/*
+Naam script     : shoppingCart.js
+Omschrijving    : Beheert het winkelwagentje in een webshop door items toe te voegen, te verwijderen, de hoeveelheid te wijzigen en de totale prijs bij te werken.
+Auteur          : hussen brasco dominik
+Project         : periode 3
+Aanmaakdatum    : 01-02-2024
+*/
+
 // OPEN & CLOSE CART
 const cartIcon = document.querySelector("#cart-icon");
 const cart = document.querySelector(".cart");
 const closeCart = document.querySelector("#cart-close");
 
+// Event listener voor het openen van het winkelwagentje
 cartIcon.addEventListener("click", () => {
   cart.classList.add("active");
 });
 
+// Event listener voor het sluiten van het winkelwagentje
 closeCart.addEventListener("click", () => {
   cart.classList.remove("active");
 });
 
-// Start when the document is ready
+// Start wanneer het document klaar is met laden
 if (document.readyState == "loading") {
   document.addEventListener("DOMContentLoaded", start);
 } else {
@@ -31,26 +41,25 @@ function update() {
 
 // =============== ADD EVENTS ===============
 function addEvents() {
-  // Remove items from cart
+  // Verwijder items uit het winkelwagentje
   let cartRemove_btns = document.querySelectorAll(".cart-remove");
-  console.log(cartRemove_btns);
   cartRemove_btns.forEach((btn) => {
     btn.addEventListener("click", handle_removeCartItem);
   });
 
-  // Change item quantity
+  // Wijzig de hoeveelheid van een item in het winkelwagentje
   let cartQuantity_inputs = document.querySelectorAll(".cart-quantity");
   cartQuantity_inputs.forEach((input) => {
     input.addEventListener("change", handle_changeItemQuantity);
   });
 
-  // Add item to cart
+  // Voeg een item toe aan het winkelwagentje
   let addCart_btns = document.querySelectorAll(".add-cart");
   addCart_btns.forEach((btn) => {
     btn.addEventListener("click", handle_addCartItem);
   });
 
-  // Buy Order
+  // Plaats een bestelling
   const buy_btn = document.querySelector(".btn-buy");
   buy_btn.addEventListener("click", handle_buyOrder);
 }
@@ -63,7 +72,6 @@ function handle_addCartItem() {
   let title = product.querySelector(".product-title").innerHTML;
   let price = product.querySelector(".product-price").innerHTML;
   let imgSrc = product.querySelector(".product-img").src;
-  console.log(title, price, imgSrc);
 
   let newToAdd = {
     title,
@@ -71,15 +79,15 @@ function handle_addCartItem() {
     imgSrc,
   };
 
-  // handle item is already exist
+  // Controleer of het item al bestaat in het winkelwagentje
   if (itemsAdded.find((el) => el.title == newToAdd.title)) {
-    alert("This Item Is Already Exist!");
+    alert("Dit item staat al in het winkelwagentje!");
     return;
   } else {
     itemsAdded.push(newToAdd);
   }
 
-  // Add product to cart
+  // Voeg het product toe aan het winkelwagentje
   let cartBoxElement = CartBoxComponent(title, price, imgSrc);
   let newNode = document.createElement("div");
   newNode.innerHTML = cartBoxElement;
@@ -104,19 +112,19 @@ function handle_changeItemQuantity() {
   if (isNaN(this.value) || this.value < 1) {
     this.value = 1;
   }
-  this.value = Math.floor(this.value); // to keep it integer
+  this.value = Math.floor(this.value); // Zorg ervoor dat de waarde een geheel getal blijft
 
   update();
 }
 
 function handle_buyOrder() {
   if (itemsAdded.length <= 0) {
-    alert("There is No Order to Place Yet! \nPlease Make an Order first.");
+    alert("Er zijn nog geen items om te bestellen! \nVoeg eerst een item toe aan het winkelwagentje.");
     return;
   }
   const cartContent = cart.querySelector(".cart-content");
   cartContent.innerHTML = "";
-  alert("Your Order is Placed Successfully :)");
+  alert("Uw bestelling is succesvol geplaatst :)");
   itemsAdded = [];
 
   update();
@@ -134,10 +142,8 @@ function updateTotal() {
     total += price * quantity;
   });
 
-  // keep 2 digits after the decimal point
+  // Houd 2 decimalen na de komma
   total = total.toFixed(2);
-  // or you can use also
-  // total = Math.round(total * 100) / 100;
 
   totalElement.innerHTML = "$" + total;
 }
@@ -152,7 +158,7 @@ function CartBoxComponent(title, price, imgSrc) {
             <div class="cart-price">${price}</div>
             <input type="number" value="1" class="cart-quantity">
         </div>
-        <!-- REMOVE CART  -->
+        <!-- Verwijder item uit het winkelwagentje -->
         <i class='bx bxs-trash-alt cart-remove'></i>
     </div>`;
 }

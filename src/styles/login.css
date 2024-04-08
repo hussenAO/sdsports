@@ -1,105 +1,124 @@
 
+/*
+Naam script     : login.css
+Omschrijving    : Dit script bevat de stijlen voor de inlogpagina.
+Auteur          : hussen brasco dominik
+Project         : periode 3
+Aanmaakdatum    : 01-02-2024
+*/
+
+/* Algemene stijlen voor de body van de pagina */
 .body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    color: white;
-    background-color: #282828;
+    display: flex; /* Gebruik flexbox om items te positioneren */
+    justify-content: center; /* Centreer horizontaal */
+    align-items: center; /* Centreer verticaal */
+    height: 100vh; /* Volledige viewporthoogte */
+    margin: 0; /* Verwijder marges */
+    color: white; /* Tekstkleur wit */
+    background-color: #282828; /* Achtergrondkleur donkergrijs */
 }
 
+/* Stijlen voor formulierelementen */
 form {
-    text-align: center;
+    text-align: center; /* Centreer tekst in het formulier */
 }
 
 input {
-    margin: 5px;
-    padding: 8px;
-    font-family: 'Roboto', sans-serif;
-    color: #333; 
-    background-color: #f0f0f0; 
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
+    margin: 5px; /* Buitenmarge rondom invoervelden */
+    padding: 8px; /* Binnenste vulling van invoervelden */
+    font-family: 'Roboto', sans-serif; /* Gebruik Roboto als lettertype */
+    color: #333; /* Tekstkleur donkergrijs */
+    background-color: #f0f0f0; /* Achtergrondkleur lichtgrijs */
+    border: 1px solid #ccc; /* Rand met lichte grijze kleur */
+    border-radius: 4px; /* Afgeronde hoeken */
 }
 
+/* Stijlen voor koppen (h2) */
 h2 {
-    margin-bottom: 0;
+    margin-bottom: 0; /* Verwijder onderste marge van kop */
 }
 
+/* Stijlen voor fieldset (groeperen van formulierelementen) */
 fieldset {
-    position: relative;
-    border-color: yellow;
-    border-radius: 5px;
-    padding-top: 30px; /* Voeg padding toe aan de bovenkant van het fieldset */
+    position: relative; /* Positie relatief t.o.v. het normale stroommodel */
+    border-color: yellow; /* Randkleur geel */
+    border-radius: 5px; /* Afgeronde hoeken voor het fieldset-element */
+    padding-top: 30px; /* Bovenste vulling van het fieldset-element */
 }
 
+/* Stijlen voor legend (titel van het fieldset) */
 legend {
-    position: absolute;
-    top: -30px; /* Verplaats de legend een beetje naar boven */
-    left: 50%;
-    transform: translate(-50%, 0);
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
+    position: absolute; /* Positie absoluut binnen het fieldset */
+    top: -30px; /* Verplaats naar boven buiten het fieldset */
+    left: 50%; /* Plaats in het midden horizontaal */
+    transform: translate(-50%, 0); /* Centreer horizontaal */
+    font-size: 20px; /* Grootte van de tekst */
+    font-weight: bold; /* Vetgedrukte tekst */
+    color: white; /* Tekstkleur wit */
 }
 
+/* Stijlen voor knoppen */
 button {
-    margin: 15px;
-    padding: 10px 20px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    color: #fff;
-    background-color: rgb(211, 145, 3);
-    border: 1px solid rgb(211, 145, 3);
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    margin: 15px; /* Buitenmarge rondom knop */
+    padding: 10px 20px; /* Binnenste vulling van knop */
+    font-family: 'Roboto', sans-serif; /* Gebruik Roboto als lettertype */
+    font-size: 16px; /* Grootte van de tekst */
+    color: #fff; /* Tekstkleur wit */
+    background-color: rgb(211, 145, 3); /* Achtergrondkleur oranje */
+    border: 1px solid rgb(211, 145, 3); /* Rand met oranje kleur */
+    border-radius: 4px; /* Afgeronde hoeken */
+    cursor: pointer; /* Wijzig cursor naar een aanwijzer */
+    transition: background-color 0.3s ease-in-out; /* Overgangseffect voor achtergrondkleur */
 }
 
+/* Hover-effect voor knoppen */
 button:hover {
-    background-color: #9f5001; 
+    background-color: #9f5001; /* Achtergrondkleur bij hover (donkeroranje) */
 }
 
-.reg{
-    color: white;
-    font-size: 20px;
-    font-style: none;
+/* Aanvullende stijlen voor registratielinks */
+.reg {
+    color: white; /* Tekstkleur wit */
+    font-size: 20px; /* Grootte van de tekst */
+    font-style: none; /* Geen specifieke stijl */
 }
-.reg :hover{
-    color: red;
+
+.reg :hover {
+    color: red; /* Tekstkleur rood bij hover */
 }
+
+/* Stijlen voor navigatiemenu */
 nav {
-    background-color: #1e1e1e;
+    background-color: #1e1e1e; /* Achtergrondkleur donkergrijs */
 }
 
 nav ul {
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    align-items: center;
-    padding: 24px;
-    padding-bottom: 10px;
+    display: flex; /* Gebruik flexbox voor de lijst */
+    justify-content: space-evenly; /* Gelijke verdeling van ruimte tussen items */
+    list-style: none; /* Verwijder standaard lijststijlen */
+    align-items: center; /* Centreer verticaal */
+    padding: 24px; /* Binnenste vulling van het menu */
+    padding-bottom: 10px; /* Onderste vulling van het menu */
 }
 
 nav ul li img {
-    height: 24px;
-    margin: 16px 0px;
+    height: 24px; /* Hoogte van het logo-afbeelding */
+    margin: 16px 0px; /* Buitenmarge boven en onder het logo */
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    
+    text-decoration: none; /* Geen onderstreping voor links */
+    color: #fff; /* Tekstkleur wit */
 }
 
-nav ul li a:hover{
-    text-decoration: underline; 
-    text-decoration-color: #f1c40f;
+/* Hover-effect voor navigatielinks */
+nav ul li a:hover {
+    text-decoration: underline; /* Onderstreping bij hover */
+    text-decoration-color: #f1c40f; /* Kleur van de onderstreping */
 }
 
+/* Algemene stijlen voor hyperlinks */
 a {
-    text-decoration: none;
-    color: #fff;
+    text-decoration: none; /* Geen onderstreping voor links */
+    color: #fff; /* Tekstkleur wit */
 }
-

@@ -1,3 +1,11 @@
+/*
+Naam script     : style.css
+Omschrijving    : Dit script bevat de algemene stijlen voor de website.
+Auteur          : hussen brasco dominik
+Project         : periode 3
+Aanmaakdatum    : 01-02-2024
+*/
+/* Algemene reset voor marges, padding en box-sizing */
 *,
 *:before,
 *:after {
@@ -5,25 +13,30 @@
     padding: 0;
     box-sizing: border-box;
 }
-:root{
+
+/* Variabelen voor kleuren */
+:root {
     --main-color: #fd4646;
     --sec-color: #4946fd;
     --text-color: #171427;
     --bg-color: #fff;
 }
 
+/* Algemene stijlen voor de body van de pagina */
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #282828;
 }
 
-.container{
+/* Stijlen voor container */
+.container {
     height: 11px;
-    position:relative;
+    position: relative;
     margin-bottom: 30px;
 }
 
-#toggle{
+/* Toggle switch */
+#toggle {
     -webkit-appearance: none;
     appearance: none;
     height: 40px;
@@ -36,7 +49,7 @@ body {
     cursor: pointer;
 }
 
-#toggle:after{
+#toggle:after {
     content: "";
     position: absolute;
     height: 30px;
@@ -47,20 +60,24 @@ body {
     border-radius: 50%;
 }
 
-.light-theme{
+/* Licht thema */
+.light-theme {
     background-color: #fff;
     color: black;
 }
-.light-theme #toggle{
-    background-color: #282828
+
+.light-theme #toggle {
+    background-color: #282828;
 }
-.light-theme #toggle:after{
+
+.light-theme #toggle:after {
     background-color: transparent;
     box-shadow: 10px 10px black;
     top: -4px;
     left: 30px;
 }
 
+/* Stijlen voor navigatie */
 nav {
     background-color: #1e1e1e;
 }
@@ -82,19 +99,20 @@ nav ul li img {
 nav ul li a {
     text-decoration: none;
     color: #fff;
-    
 }
 
-nav ul li a:hover{
-    text-decoration: underline; 
+nav ul li a:hover {
+    text-decoration: underline;
     text-decoration-color: #f1c40f;
 }
 
+/* Stijlen voor hyperlinks */
 a {
     text-decoration: none;
     color: #fff;
 }
 
+/* Stijlen voor advertentieruimte */
 #ads {
     height: calc(100vh - 107.5px);
     display: flex;
@@ -125,35 +143,7 @@ a {
     transition: all 0.5s;
 }
 
-#ads .ad:hover .ad-content {
-    font-size: 24px;
-    color: white;
-}
-
-#ads .ad {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#ads .ad h1 {
-    text-wrap: wrap;
-}
-
-#ads #ad1 {
-    background-image: url("../assets/basketbal.jpg");
-}
-
-#ads #ad2 {
-    background-image: url("../assets/Running1.jpeg");
-}
-
-#ads #ad3{
-    background-image: url("../assets/voetbal1.jpg");
-    background-color: #2e2e2e;
-}
-
-
+/* Stijlen voor de footer */
 footer {
     background-color: #282828;
     color: #fff;
@@ -220,6 +210,8 @@ footer {
     text-align: center;
     margin-top: 40px;
 }
+
+/* Media query voor kleinere schermen */
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
@@ -231,9 +223,8 @@ footer {
     }
 }
 
-
-
-main{
+/* Stijlen voor hoofdinhoud */
+main {
     max-width: 1500px;
     width: 95%;
     margin: 30px auto;
@@ -243,7 +234,7 @@ main{
     margin: auto;
 }
 
-main .card{
+main .card {
     max-width: 300px;
     flex: 1 1 210px;
     text-align: center;
@@ -253,46 +244,42 @@ main .card{
     background-color: lightgray;
 }
 
-main .card .image{
+/* Stijlen voor productweergave */
+main .card .image {
     height: 50%;
     margin-bottom: 20px;
 }
 
-main .card .image img{
+main .card .image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-main .card .caption{
+main .card .caption {
     padding-left: 1em;
     line-height: 2em;
     height: 25%;
 }
 
-main .card .caption .discount{
+main .card .caption .discount {
     color: red;
 }
 
-
-del{
-    text-decoration: line-through;
-}
-
-main .card .caption .rate{
+main .card .caption .rate {
     margin: 0 auto;
     width: auto;
 }
 
-main .card .caption .rate i{
+main .card .caption .rate i {
     color: gold;
 }
 
-main .card a{
+main .card a {
     width: 50%;
 }
 
-main .card button{
+main .card button {
     border: 2px solid black;
     padding: 1em;
     width: 80%;
@@ -302,7 +289,7 @@ main .card button{
     position: relative;
 }
 
-main .card button:before{
+main .card button:before {
     content: "";
     position: absolute;
     top: 0;
@@ -310,11 +297,11 @@ main .card button:before{
     bottom: 0;
     width: 0;
     background-color: black;
-    transition: all .5s;
+    transition: all 0.5s;
     margin: 0;
 }
 
-main .card button::after{
+main .card button::after {
     content: "";
     position: absolute;
     top: 0;
@@ -322,27 +309,21 @@ main .card button::after{
     bottom: 0;
     width: 0;
     background-color: black;
-    transition: all .5s;
+    transition: all 0.5s;
 }
 
-main .card button:hover::before{
+main .card button:hover::before {
     width: 30%;
 }
 
-main .card button:hover::after{
+main .card button:hover::after {
     width: 30%;
 }
-#cart-icon{
 
-    cursor: pointer;
-    color: white;
-}
-
-/* CART  */
-.cart{
+/* Stijlen voor de winkelwagen */
+.cart {
     position: fixed;
     top: 0;
-    right: 0;
     right: -100%; 
     width: 360px;
     height: 100vh;
@@ -354,67 +335,80 @@ main .card button:hover::after{
     border: 1px solid var(--main-color);
     transition: 1.5s;
 }
-.cart.active{
+
+.cart.active {
     right: 0;
     transition: .5s;
     z-index: 1000;
 }
-.cart-title{
+
+.cart-title {
     text-align: center;
     font-size: 1.5rem;
     font-weight: 600;
     margin-top: 2rem;
 }
-.cart-box{
+
+.cart-box {
     display: grid;
     grid-template-columns: 32% 50% 18%;
     align-items: center;
     gap: 1rem;
     margin-top: 1rem;
 }
-.cart-img{
+
+.cart-img {
     width: 100px;
     height: 100px;
     object-fit: contain;
     padding: 10px;
 }
-.detail-box{
+
+.detail-box {
     display: grid;
     row-gap: .5rem;
 }
-.cart-product-title{
+
+.cart-product-title {
     font-size: 1rem;
     text-transform: uppercase;
 }
-.cart-price{
+
+.cart-price {
     font-weight: 500;
 }
-.cart-quantity{
+
+.cart-quantity {
     border: 1px solid var(--text-color);
     outline-color: var(--main-color);
     width: 2.4rem;
     text-align: center;
     font-size: 1rem;
 }
-.cart-remove{
+
+.cart-remove {
     font-size: 24px;
     color: var(--main-color);
     cursor: pointer;
 }
-.total{
+
+.total {
     display: flex;
     justify-content: flex-end;
     margin-top: 1.5rem;
     border-top: 1px solid var(--text-color);
 }
-.total-title{
+
+.total-title {
     font-size: 1rem;
     font-weight: 600;
 }
-.total-price{
+
+.total-price {
     margin-left: .5rem;
 }
-.btn-buy{
+
+.btn-buy {
     display: flex;
     margin: 1.5rem auto 0 auto;
     padding: 12px 20px;
@@ -425,10 +419,12 @@ main .card button:hover::after{
     font-weight: 500;
     cursor: pointer;
 }
-.btn-buy:hover{
+
+.btn-buy:hover {
     background-color: var(--text-color);
 }
-#cart-close{
+
+#cart-close {
     position: absolute;
     top: 1rem;
     right: .8rem;
@@ -437,85 +433,72 @@ main .card button:hover::after{
     cursor: pointer;
 }
 
-
- /* Dropdown Button */
-.dropbtn {
-    font-size: 16px;  
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Dropdown button on hover & focus */
-  .dropdown:hover .dropbtn {
-    background-color: #ddd;
-  }
-  
-  /* The dropdown container */
-  .dropdown {
+/* Stijlen voor dropdown */
+.dropdown {
     position: relative;
     display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
+}
+
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
+}
+
+.dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
     display: block;
-  }
-  .section-title{
+}
+
+/* Stijlen voor sectietitel */
+.section-title {
     font-style: 1.5rem;
     font-weight: 600;
     text-align: center;
     margin-bottom: 1.5rem;
 }
-.shop-content{
+
+/* Stijlen voor producten in de winkel */
+.shop-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, auto));
     gap: 1.5rem;
 }
-  .product-box{
-    position: relative;
-}
-.product-box:hover{
+
+.product-box:hover {
     padding: 10px;
     border: 1px solid var(--text-color);
     transition: .4s;
 }
-.product-img{
+
+.product-img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     margin-bottom: .5rem;
 }
-.product-title{
+
+.product-title {
     font-size: 1.1rem;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: .5rem;
 }
-.product-price{
-    font-weight: 500;
-}
-.add-cart{
+
+.add-cart {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -524,10 +507,10 @@ main .card button:hover::after{
     padding: 10px;
     cursor: pointer;
 }
-.add-cart:hover{
+
+.add-cart:hover {
     background-color: hsl(249, 32%, 17%);
 }
-
 
 #searchBar {
     width: 500px;
@@ -538,9 +521,9 @@ main .card button:hover::after{
     margin: auto; 
     font-size: 16px;
     display: block; 
-  }
-  
-  #myList li {
+}
+
+#myList li {
     width: 200px;
     height: 30px;
     border: 1px solid #ccc;
@@ -551,15 +534,14 @@ main .card button:hover::after{
     display: none; 
     list-style-type: none; 
     text-align: center; 
-  }
+}
 
-  #searchBar {
+#searchBar {
     display: none;
-    /* Other styles... */
-  }
-  #search-icon {
+}
+
+#search-icon {
     font-size: 24px;
     cursor: pointer;
     color: white;
-  }
-
+}
