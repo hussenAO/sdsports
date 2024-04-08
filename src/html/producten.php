@@ -260,7 +260,7 @@ if (isset($_SESSION['login'])) {
 </div>   
          
         </main>
-    <footer>
+        <footer>
         <div class="footer-container">
             <div class="footer-section">
                 <h4>Over ons</h4>
@@ -269,9 +269,9 @@ if (isset($_SESSION['login'])) {
 
             <div class="footer-section">
                 <h4>Volg ons op</h4>
-                <h5>Facebook<h5>
-                <h5>Twitter<h5>
-                <h5>Instagram<h5>
+                <a href="https://facebook.com" class="fa fa-facebook"> Facebook</a>
+                <a href="https://twitter.com" class="fa fa-twitter"> Twitter</a>
+                <a href="https://www.instagram.com" class="fa fa-instagram"> Instagram</a>
             </div>
             
             <div class="footer-section">
@@ -285,7 +285,7 @@ if (isset($_SESSION['login'])) {
         <div class="footer-bottom">
             <p>&copy; 2023 SD Sports. All rights reserved.</p>
         </div>
-        <script src="../JS/script.js"></script>
-        <script src="../JS/cart.js"></script>
     </footer>
+         <script src="../JS/script.js"></script>
+        <script src="../JS/cart.js"></script>
 </body>

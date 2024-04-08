@@ -120,18 +120,18 @@ if (isset($_SESSION['login'])) {
         <section id="ads">
             <div class="ad" id="ad1">
                 <div class="ad-content">
-                    <a href="html/basketbal.html">
+                    <a href="html/basketbal.php">
                     <h1>Basketbal</h1></a>
                 </div>
             </div>
             <div class="ad" id="ad2">
                 <div class="ad-content">
-                    <a href="html/running.html"><h1>Running</h1></a>
+                    <a href="html/running.php"><h1>Running</h1></a>
                 </div>
             </div>
             <div class="ad" id="ad3">
                 <div class="ad-content">
-                    <a href="html/voetbal.html"><h1>Voetbal</h1></a>
+                    <a href="html/voetbal.php"><h1>Voetbal</h1></a>
                 </div>
             </div>
         </section>

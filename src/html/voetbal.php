@@ -174,19 +174,16 @@ if (isset($_SESSION['login'])) {
         <div class="footer-container">
             <div class="footer-section">
                 <h4>Over ons</h4>
-                <p>Welkom bij SDsports, SDsports bevat al jou SportDesires. Onze webwinkel is sinds kort geopend en wij
-                    hebben een groeiende selectie van limited of moeilijk te verkrijgen sportschoenen. Zie je een
-                    product hier niet staat terwijl jij denkt dat het wel daar zou moeten staan? laat het weten op onze
-                    sociale media of stuur een mail. infoSD@gmail.com</p>
+                <p>Welkom bij SDsports, SDsports bevat al jou SportDesires. Onze webwinkel is sinds kort geopend en wij hebben een groeiende selectie van limited of moeilijk te verkrijgen sportschoenen. Zie je een product hier niet staat terwijl jij denkt dat het wel daar zou moeten staan? laat het weten op onze sociale media of stuur een mail. infoSD@gmail.com</p>
             </div>
 
             <div class="footer-section">
                 <h4>Volg ons op</h4>
-                <h5>Facebook<h5>
-                        <h5>Twitter<h5>
-                                <h5>Instagram<h5>
+                <a href="https://facebook.com" class="fa fa-facebook"> Facebook</a>
+                <a href="https://twitter.com" class="fa fa-twitter"> Twitter</a>
+                <a href="https://www.instagram.com" class="fa fa-instagram"> Instagram</a>
             </div>
-
+            
             <div class="footer-section">
                 <h4>Alle producten</h4>
                 <a href="producten.html">Basketbal schoenen</a>
@@ -194,7 +191,7 @@ if (isset($_SESSION['login'])) {
                 <a href="producten.html">Ren schoenen</a>
             </div>
         </div>
-
+        
         <div class="footer-bottom">
             <p>&copy; 2023 SD Sports. All rights reserved.</p>
         </div>
